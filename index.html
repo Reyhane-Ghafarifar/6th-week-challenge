@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/fc5adad0a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    
+  </head>
+  <body>
+    <div
+      class="container border border-0 rounded my-5 py-5 bg-warning bg-opacity-10"
+    >
+      <form class="row g-3 d-flex justify-content-center">
+        <div class="col-8">
+          <input
+            class="form-control fs-3 text-secondary"
+            list="datalistOptions"
+            id="exampleDataList"
+            placeholder="Type to search..."
+          />
+          <datalist id="datalistOptions">
+            <option value="Tehran"></option>
+            <option value="Ahvaz"></option>
+            <option value="Qom"></option>
+            <option value="Damavand"></option>
+            <option value="Tabriz"></option>
+          </datalist>
+        </div>
+        <div class="col-auto">
+          <input type="submit" value="🔍" class="form-control fs-3" />
+        </div>
+      </form>
+      <div class="d-flex"><button type="button" class="btn btn-primary p-3 justify-self-center fs-4">current temperature</button></div>
+      <div class="weather-info d-flex my-5">
+        <p class="p-2 align-self-center fs-1 me-5" id="city">
+          Tehran <p class="align-self-center fs-1 me-5" id="date">Friday 01:52</p>
+        </p>
+        <div class="p-2 d-flex flex-column align-items-center">
+          <p>
+            <i class="fa-solid fa-cloud fa-fade mb-0"></i>
+          </p>
+          <p class="my-0 text-secondary fs-5" id="description">Partly Cloudy</p>
+          <p class="my-0 text-secondary fs-5" id="humidity">Humidity 25%</p>
+        </div>
+        <p class="current-temperature ms-auto p-2 align-self-center me-2" id="temp">
+          19
+        </p>
+        <p class="fs-4 align-self-center me-2">°C</p>
+      </div>
+      <div class="Daily-Forecast">
+        <p class="fs-1 ms-2 p-2">Daily Forecast</p>
+        <div class="d-flex justify-content-evenly text-center">
+          <div>
+            <i class="fa-solid fa-sun"></i>
+            <p class="text-secondary fs-3 align-self-center">Thu</p>
+            <p class="text-secondary fs-3 align-self-center">100°</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-sun"></i>
+            <p class="text-secondary fs-3 align-self-center">Fri</p>
+            <p class="text-secondary fs-3 align-self-center">102°</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-sun"></i>
+            <p class="text-secondary fs-3">Sat</p>
+            <p class="text-secondary fs-3">101°</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-cloud"></i>
+            <p class="text-secondary fs-3">Sun</p>
+            <p class="text-secondary fs-3">100°</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-sun"></i>
+            <p class="text-secondary fs-3">Mon</p>
+            <p class="text-secondary fs-3">102°</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
